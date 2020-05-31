@@ -31,7 +31,7 @@ namespace RookieHacksCOVID
             {
                 idCheck.Text = "Not Found";
                 emailCheck.Text = "N.A.";
-                covidStatus.Text = "N.A."
+                covidStatus.Text = "N.A.";
                 emailPatientButton.IsEnabled = false;
             }
             else
