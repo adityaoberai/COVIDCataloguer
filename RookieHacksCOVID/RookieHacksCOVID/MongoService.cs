@@ -23,8 +23,8 @@ namespace RookieHacksCOVID
                 if (tasksCollection == null)
                 {
                     var mongoUrl = new MongoUrl("ADD MONGODB API CONNECTION STRING");
+                    //remove &replicaSet=globaldb from connection string if present
 
-                    // APIKeys.Connection string is found in the portal under the "Connection String" blade
                     MongoClientSettings settings = MongoClientSettings.FromUrl(mongoUrl);
 
                     settings.SslSettings = new SslSettings() { EnabledSslProtocols = SslProtocols.Tls12 };
