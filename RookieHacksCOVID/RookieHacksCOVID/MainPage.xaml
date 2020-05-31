@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RookieHacksCOVID.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to COVID-19 Patient Cataloguer"
+           FontSize="Large"
+           HorizontalOptions="Center"
+           VerticalOptions="StartAndExpand" />
+
+        <Label Text="Add Patient Details to Database:"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand" />
+        <Entry x:Name="name" Placeholder="Patient Name" />
+        <Entry x:Name="pid1" Placeholder="Patient Phone Number" />
+        <Entry x:Name="email" Placeholder="Patient Email Address" />
+        <Entry x:Name="cstatus" Placeholder="COVID-19 Status (Yes or No)"  />
+
+        <Button x:Name="addPatientButton" Text="Add/Update"
+               Clicked="addPatientButton_Clicked"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" />
+            
+        <Label Text="Check if Patient Details are present:"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand" />
+        <Entry x:Name="pid2" Placeholder="Patient Phone Number" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button x:Name="checkPatientButton" Text="Check"
+                Clicked="checkPatientButton_Clicked"
+                HorizontalOptions="CenterAndExpand "
+                VerticalOptions="CenterAndExpand"
+                Grid.Row="0"
+                Grid.Column="0"/>
+
+            <Button x:Name="emailPatientButton" Text="Email Details"
+                Clicked="emailPatientButton_Clicked"
+                HorizontalOptions="CenterAndExpand "
+                VerticalOptions="CenterAndExpand"
+                IsEnabled="False"
+                Grid.Row="0"
+                Grid.Column="1"/>
+            </Grid>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Entry x:Name="idCheck" Text=""
+               Placeholder="Name of Patient"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               IsReadOnly="True"
+               Grid.Row="0"
+               Grid.Column="0"/>
+
+            <Entry x:Name="emailCheck" Text="" 
+               Placeholder="Email address" 
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               IsReadOnly="True"
+               Grid.Row="0"
+               Grid.Column="2"/>
+
+            <Entry x:Name="covidStatus" Text="" 
+               Placeholder="COVID-19 Status" 
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               IsReadOnly="True"
+               Grid.Row="1"
+               Grid.Column="1"/>
+        </Grid>
+
+        <Button x:Name="resetButton" Text="Reset" 
+                Clicked="resetButton_Clicked"
+                HorizontalOptions="CenterAndExpand "
+                VerticalOptions="CenterAndExpand"/>
+
+    </StackLayout>
+
+</ContentPage>
