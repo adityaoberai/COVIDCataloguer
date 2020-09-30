@@ -1,5 +1,7 @@
 # TagCOVID
-An application to help healthcare institutions catalog patient contact details from the comfort of their smartphones or PCs
+An application to help healthcare institutions catalog patient contact details from the comfort of their smartphones or PCs.
+
+Check out the [demo video on YouTube](https://www.youtube.com/watch?v=1uFTOBumwz0)
 
 ## Inspiration
 Looking at the current scenario with COVID-19 and the increasing infected numbers on a daily basis, it has become more and more difficult for healthcare institutions to keep track of patients who have been infected, especially in smaller towns and villages which may not have the best of infrastructure and connectivity with other towns and metropolitan cities. 
