@@ -21,10 +21,27 @@
         <Entry x:Name="email" Placeholder="Patient Email Address" />
         <Entry x:Name="cstatus" Placeholder="COVID-19 Status (Yes or No)"  />
 
-        <Button x:Name="addPatientButton" Text="Add/Update"
-               Clicked="addPatientButton_Clicked"
-               HorizontalOptions="CenterAndExpand"
-               VerticalOptions="CenterAndExpand" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Button x:Name="addPatientButton" Text="Add"
+                Clicked="addPatientButton_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" 
+                Grid.Row="0"
+                Grid.Column="0"/>
+            <Button x:Name="updatePatientButton" Text="Update"
+                Clicked="addPatientButton_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" 
+                Grid.Row="0"
+                Grid.Column="1"/>
+        </Grid>
             
         <Label Text="Check if Patient Details are present:"
                VerticalOptions="CenterAndExpand"

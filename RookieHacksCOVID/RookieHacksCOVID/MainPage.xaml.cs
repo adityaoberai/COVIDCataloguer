@@ -31,6 +31,7 @@ namespace RookieHacksCOVID
             {
                 idCheck.Text = "Not Found";
                 emailCheck.Text = "N.A.";
+                covidStatus.Text = "N.A.";
                 emailPatientButton.IsEnabled = false;
             }
             else
@@ -38,8 +39,9 @@ namespace RookieHacksCOVID
                 idCheck.Text = p.Name;
                 emailCheck.Text = p.Email;
                 emailPatientButton.IsEnabled = true;
+                covidStatus.Text = p.CStatus;
             }
-            covidStatus.Text = p.CStatus;
+            
         }
 
         private async void addPatientButton_Clicked(object sender, EventArgs e)
@@ -78,7 +80,7 @@ namespace RookieHacksCOVID
 				MailMessage mail = new MailMessage();
 				SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-				mail.From = new MailAddress("GMAIL ADDRESS");
+				mail.From = new MailAddress("adityaoberai1@gmail.com");
 				mail.To.Add(p.Email);
 				mail.Subject = "COVID-19 Status";
 				mail.Body = "Here are your details:\n\nName: " + p.Name + "\nPhone Number: " + p.Id + "\nCOVID-19 Status: " + p.CStatus;
@@ -87,7 +89,7 @@ namespace RookieHacksCOVID
 				SmtpServer.Host = "smtp.gmail.com";
 				SmtpServer.EnableSsl = true;
 				SmtpServer.UseDefaultCredentials = false;
-				SmtpServer.Credentials = new System.Net.NetworkCredential("ADD GMAIL ADDRESS", "GMAIL PASSWORD");
+				SmtpServer.Credentials = new System.Net.NetworkCredential("adityaoberai1@gmail.com", "racers1234");
 
 				SmtpServer.Send(mail);
 				resetAll();

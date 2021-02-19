@@ -22,7 +22,7 @@ namespace RookieHacksCOVID
             {
                 if (tasksCollection == null)
                 {
-                    var mongoUrl = new MongoUrl("ADD MONGODB API CONNECTION STRING");
+                    var mongoUrl = new MongoUrl("mongodb://adityaoberai1:xkdsoTCIGJPELdD7wyHzRpJNrGszyGbnVq1DN8vLkHDRPzPE1PJVtHCWlLF81qbZRLDcNrKbLdIYwEccR4Zm3g==@adityaoberai1.mongo.cosmos.azure.com:10255/?ssl=true&maxIdleTimeMS=120000&appName=@adityaoberai1@");
 
                     // APIKeys.Connection string is found in the portal under the "Connection String" blade
                     MongoClientSettings settings = MongoClientSettings.FromUrl(mongoUrl);
