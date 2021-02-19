@@ -38,10 +38,10 @@ namespace RookieHacksCOVID
             {
                 idCheck.Text = p.Name;
                 emailCheck.Text = p.Email;
+                covidStatus.Text = p.CStatus;
                 emailPatientButton.IsEnabled = true;
                 covidStatus.Text = p.CStatus;
             }
-            
         }
 
         private async void addPatientButton_Clicked(object sender, EventArgs e)
